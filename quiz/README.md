@@ -27,3 +27,9 @@ git clone [link]
 
 
 ![xoxo](https://i.pinimg.com/736x/e8/52/f9/e852f9c60771df76553c674458d0b914.jpg)
+
+
+
+
+>[!NOTE]
+> Why is this actually so fun omg
