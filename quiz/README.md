@@ -22,6 +22,8 @@ git clone [link]
 - Wacht even tot alles goed geladen is en als alles goed is gegaan wordt er dan een nieuw tab geopent met de applicatie.
 - Easy peasy lemon squeezy
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 > [!IMPORTANT]
 > Als het na mijn duidelijke uitleg niet is gelukt om de applicatie te runnen, dan moet je de instructies beter lezen.
 
