@@ -32,4 +32,4 @@ git clone [link]
 
 
 >[!NOTE]
-> Why is this actually so fun omg
+> why is writing readmes actually so fun omg
