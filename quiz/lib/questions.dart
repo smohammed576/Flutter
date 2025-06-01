@@ -4,23 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:quiz/main.dart';
+import 'package:quiz/question.dart';
 import 'package:quiz/scoreboard.dart';
 
-class Question {
-  final String image;
-  final List<String> answers;
-  final String correct;
-
-  Question({required this.image, required this.answers, required this.correct});
-
-  factory Question.fromJson(Map<String, dynamic> json) {
-    return Question(
-      image: json['foto'],
-      answers: List<String>.from(json['antwoorden']),
-      correct: json['goed_antwoord'],
-    );
-  }
-}
 
 class QuestionScreen extends StatefulWidget {
   const QuestionScreen({super.key});
