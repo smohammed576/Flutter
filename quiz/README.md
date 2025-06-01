@@ -24,11 +24,11 @@ git clone [link]
 
 > [!IMPORTANT]
 > Als het na mijn duidelijke uitleg niet is gelukt om de applicatie te runnen, dan moet je de instructies beter lezen.
-
+&nbsp;&nbsp;&nbsp;&nbsp;
 
 ![xoxo](https://i.pinimg.com/736x/e8/52/f9/e852f9c60771df76553c674458d0b914.jpg)
 
-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 
 >[!NOTE]
