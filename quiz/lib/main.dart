@@ -25,7 +25,6 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 64, 109, 70),
-      // appBar: AppBar(title: Icon(Icons.leaderboard_rounded), backgroundColor: Colors.transparent,),
       body: Stack(
         children: [
           Padding(
@@ -99,12 +98,10 @@ class HomeScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) => ScoreboardScreen(),
-                  )
+                  MaterialPageRoute(builder: (context) => ScoreboardScreen()),
                 );
               },
-              icon: Icon(Icons.leaderboard_rounded, color: Colors.white,),
+              icon: Icon(Icons.leaderboard_rounded, color: Colors.white),
             ),
           ),
         ],

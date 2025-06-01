@@ -38,21 +38,12 @@ class _QuestionScreenState extends State<QuestionScreen> {
   late Timer _timer;
   int _totalSeconds = 0;
   bool animationToggle = false;
-  // int _minuteCount = 0;
-  // int _secondCount = 0;
 
   @override
   void initState() {
     super.initState();
     _timer = Timer.periodic(Duration(seconds: 1), (timer) {
       setState(() {
-        // if(_secondCount == 59){
-        //   _secondCount = 0;
-        //   _minuteCount += 1;
-        // }
-        // else{
-        //   _secondCount += 1;
-        // }
         _totalSeconds += 1;
       });
     });
@@ -98,9 +89,6 @@ class _QuestionScreenState extends State<QuestionScreen> {
         index++;
       });
     });
-    // Future.delayed(const Duration(milliseconds: 2000), () {
-    //     animationToggle = false;
-    // });
   }
 
   @override
@@ -180,7 +168,6 @@ class _QuestionScreenState extends State<QuestionScreen> {
                 SizedBox(width: 10),
                 Container(
                   width: 60,
-                  // height: 20,
                   padding: EdgeInsets.symmetric(vertical: 4),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
@@ -209,58 +196,57 @@ class _QuestionScreenState extends State<QuestionScreen> {
             AnimatedOpacity(
               opacity: animationToggle ? 0 : 1,
               duration: const Duration(milliseconds: 500),
-              onEnd: (){
+              onEnd: () {
                 setState(() {
                   animationToggle = false;
                 });
               },
               child: Expanded(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(12),
-                    child: flag,
-                  ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    spacing: 15,
-                    children: question.answers.map((answer) {
-                      Color background = Colors.white;
-                      Color color = Colors.black;
-                      if (clicked) {
-                        if (answer == question.correct) {
-                          background = const Color(0xFF42B151);
-                          color = Colors.white;
-                        } else if (answer == selected) {
-                          background = const Color(0xFFED6968);
-                          color = Colors.white;
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(12),
+                      child: flag,
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      spacing: 15,
+                      children: question.answers.map((answer) {
+                        Color background = Colors.white;
+                        Color color = Colors.black;
+                        if (clicked) {
+                          if (answer == question.correct) {
+                            background = const Color(0xFF42B151);
+                            color = Colors.white;
+                          } else if (answer == selected) {
+                            background = const Color(0xFFED6968);
+                            color = Colors.white;
+                          }
                         }
-                      }
 
-                      return ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: background,
-                          minimumSize: const Size(280, 50),
-                          padding: EdgeInsets.symmetric(vertical: 15),
-                        ),
-                        onPressed: () => check(answer),
-                        child: Text(
-                          answer,
-                          style: TextStyle(
-                            color: color,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w600,
+                        return ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: background,
+                            minimumSize: const Size(280, 50),
+                            padding: EdgeInsets.symmetric(vertical: 15),
                           ),
-                        ),
-                      );
-                    }).toList(),
-                  ),
-                ],
+                          onPressed: () => check(answer),
+                          child: Text(
+                            answer,
+                            style: TextStyle(
+                              color: color,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        );
+                      }).toList(),
+                    ),
+                  ],
+                ),
               ),
             ),
-            ),
-            
           ],
         ),
       ),

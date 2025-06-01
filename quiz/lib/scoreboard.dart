@@ -4,8 +4,8 @@ import 'package:quiz/main.dart';
 import 'package:quiz/player.dart';
 import 'package:quiz/questions.dart';
 import 'package:image_picker/image_picker.dart';
-// import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class ScoreboardScreen extends StatefulWidget {
   final int? score;
@@ -39,8 +39,6 @@ class _ScoreboardScreenState extends State<ScoreboardScreen> {
     final json = scoreboard.map((score) => score.toJson()).toList();
     prefs.setString('scoreboard', jsonEncode(json));
     loadData();
-    // SharedPreferences prefs = await SharedPreferences.getInstance();
-    // await prefs.setString(_key, _value);
   }
 
   Future<void> loadData() async {
@@ -59,18 +57,12 @@ class _ScoreboardScreenState extends State<ScoreboardScreen> {
         });
       });
     }
-    // SharedPreferences prefs = await SharedPreferences.getInstance();
-    // setState(() {
-    //   // _value = prefs.getString(_key) ?? "";
-    // });
   }
+
+  final ScrollController _scrollController = ScrollController();
 
   @override
   Widget build(BuildContext context) {
-    // final hasScore = widget.score != null;
-    // final hasTime = widget.time != null;
-    // print(scoreboard);
-
     return Scaffold(
       appBar: AppBar(
         actionsPadding: EdgeInsets.symmetric(horizontal: 10),
@@ -89,7 +81,10 @@ class _ScoreboardScreenState extends State<ScoreboardScreen> {
           },
           icon: Icon(Icons.home_rounded),
         ),
-        title: Text('Scorebord', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600)),
+        title: Text(
+          'Scorebord',
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
+        ),
         actions: [
           ElevatedButton(
             style: ElevatedButton.styleFrom(
@@ -120,18 +115,16 @@ class _ScoreboardScreenState extends State<ScoreboardScreen> {
           color: Colors.white,
         ),
         child: ListView.builder(
+          controller: _scrollController,
           itemCount: scoreboard.length,
           itemBuilder: (context, index) {
             final player = scoreboard[index];
-            // String formatTime(){
             int m, s;
             m = player.time! ~/ 60;
             s = player.time! - (m * 60);
 
             String formattedTime = '$m:${s.toString().padLeft(2, '0')}';
 
-            //   return formattedTime;
-            // }
             Color color = Colors.transparent;
             if (index == 0) {
               color = const Color(0xFFEDC658);
@@ -176,11 +169,6 @@ class _ScoreboardScreenState extends State<ScoreboardScreen> {
                           ),
                         ),
                       ),
-                      // CircleAvatar(
-                      //   radius: 20,
-                      //   // backgroundImage: FileImage(File(player.imagePath)),
-                      //   child: Image.network(player.imagePath),
-                      // ),
                       ClipRRect(
                         borderRadius: BorderRadius.circular(100),
                         child: Image.network(
@@ -205,7 +193,6 @@ class _ScoreboardScreenState extends State<ScoreboardScreen> {
                     children: [
                       Container(
                         width: 60,
-                        // height: 20,
                         padding: EdgeInsets.symmetric(vertical: 4),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
@@ -239,6 +226,10 @@ class _ScoreboardScreenState extends State<ScoreboardScreen> {
     );
   }
 
+  Future<PermissionStatus> requestPermission() async {
+    return await Permission.photos.request();
+  }
+
   Future<void> _dialogBuilder(BuildContext context) {
     return showDialog<void>(
       context: context,
@@ -254,14 +245,14 @@ class _ScoreboardScreenState extends State<ScoreboardScreen> {
               ),
               elevation: 10,
               content: Row(
-                // mainAxisSize: MainAxisSize.min,
-                // mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFFE1E1E1)
+                      backgroundColor: const Color(0xFFE1E1E1),
                     ),
                     onPressed: () async {
+                      // PermissionStatus permissionStatus = await requestPermission();
+                      // if(permissionStatus == PermissionStatus.granted){
                       final pick = await ImagePicker().pickImage(
                         source: ImageSource.gallery,
                       );
@@ -270,6 +261,16 @@ class _ScoreboardScreenState extends State<ScoreboardScreen> {
                           path = pick.path;
                         });
                       }
+                      // }
+                      // openAppSettings();
+                      // final pick = await ImagePicker().pickImage(
+                      //   source: ImageSource.gallery,
+                      // );
+                      // if (pick != null) {
+                      //   setState(() {
+                      //     path = pick.path;
+                      //   });
+                      // } werkt niet op web, so thats why its commented:) maar yk nu kan je zien dat de functie er wel is
                     },
                     // child: Icon(Icons.photo_size_select_actual_outlined),
                     child: ClipRRect(
@@ -279,7 +280,6 @@ class _ScoreboardScreenState extends State<ScoreboardScreen> {
                               Icons.photo_size_select_actual_outlined,
                               size: 40,
                             )
-                          // : Image.file(File(path)),
                           : Image.network(
                               path,
                               width: 40,
@@ -297,7 +297,6 @@ class _ScoreboardScreenState extends State<ScoreboardScreen> {
                       ),
                       onChanged: (value) {
                         setState(() {
-                          // _value = value;
                           name = value;
                         });
                       },
@@ -326,7 +325,7 @@ class _ScoreboardScreenState extends State<ScoreboardScreen> {
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFF111111),
-                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                    padding: EdgeInsets.symmetric(horizontal: 25, vertical: 20),
                   ),
                   onPressed: () {
                     if (name.isNotEmpty && path.isNotEmpty) {
@@ -339,10 +338,18 @@ class _ScoreboardScreenState extends State<ScoreboardScreen> {
                             time: widget.time,
                           ),
                         );
-                        // name = '';
-                        // path = '';
                       });
                       saveScore();
+                      Future.delayed(Duration(milliseconds: 100), () {
+                        int index = scoreboard.indexWhere(
+                          (item) => item.name == name,
+                        );
+                        if (index != -1) {
+                          _scrollController.jumpTo(
+                            (index - 1).clamp(0, scoreboard.length - 1) * 50,
+                          );
+                        }
+                      });
                       Navigator.of(context).pop();
                     }
                   },
