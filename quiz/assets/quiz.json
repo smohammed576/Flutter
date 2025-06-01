@@ -1,0 +1,54 @@
+{
+  "quizvragen": [
+    {
+      "foto": "images/vlag_frankrijk.png",
+      "antwoorden": ["Nederland", "Frankrijk", "Luxemburg", "Rusland"],
+      "goed_antwoord": "Frankrijk"
+    },
+    {
+      "foto": "images/vlag_kazachstan.png",
+      "antwoorden": ["Zuid-Korea", "China", "Indonesië", "Kazachstan"],
+      "goed_antwoord": "Kazachstan"
+    },
+    {
+      "foto": "images/vlag_brazilie.png",
+      "antwoorden": ["Brazilië", "Argentinië", "Mexico", "Portugal"],
+      "goed_antwoord": "Brazilië"
+    },
+    {
+      "foto": "images/vlag_duitsland.svg",
+      "antwoorden": ["België", "Duitsland", "Oostenrijk", "Polen"],
+      "goed_antwoord": "Duitsland"
+    },
+    {
+      "foto": "images/vlag_verenigd_koninkrijk.png",
+      "antwoorden": ["Australië", "Nieuw-Zeeland", "Verenigd Koninkrijk", "Canada"],
+      "goed_antwoord": "Verenigd Koninkrijk"
+    },
+    {
+      "foto": "images/vlag_zwitserland.jpg",
+      "antwoorden": ["Zwitserland", "Denemarken", "Noorwegen", "Malta"],
+      "goed_antwoord": "Zwitserland"
+    },
+    {
+      "foto": "images/vlag_china.svg",
+      "antwoorden": ["Vietnam", "Singapore", "China", "Taiwan"],
+      "goed_antwoord": "China"
+    },
+    {
+      "foto": "images/vlag_zuid_korea.png",
+      "antwoorden": ["Japan", "Zuid-Korea", "Thailand", "Filipijnen"],
+      "goed_antwoord": "Zuid-Korea"
+    },
+    {
+      "foto": "images/vlag_canada.png",
+      "antwoorden": ["Verenigde Staten", "Noorwegen", "Finland", "Canada"],
+      "goed_antwoord": "Canada"
+    },
+    {
+      "foto": "images/vlag_finland.png",
+      "antwoorden": ["Zweden", "Finland", "Estland", "IJsland"],
+      "goed_antwoord": "Finland"
+    }
+  ]
+}
