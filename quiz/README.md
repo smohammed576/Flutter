@@ -23,4 +23,4 @@ git clone [link]
 - Easy peasy lemon squeezy
 
 > [!IMPORTANT]
-> Als het na mijn duidelijke uitleg niet is gelukt om de applicatie te runnen, dan is dat jouw fout. Lees de instructies beter
+> Als het na mijn duidelijke uitleg niet is gelukt om de applicatie te runnen, dan moet je de instructies beter lezen.
