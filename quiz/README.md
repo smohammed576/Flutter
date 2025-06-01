@@ -1,11 +1,15 @@
 # Quiz
 
+&nbsp;
+
 ## Installatie
 
 - Open Visual Studio Code en ga naar Extensies (Ctrl+Shift+X voor Windows, Command+Shift+X voor Mac)
 - Zoek en installeer de Flutter en Dart extensies in Visual Studio Code.
 - Installeer Visual Studio Code haha.
 - Zorg ervoor dat Git geinstalleerd is op je apparaat om het project te kunnen clonen, zo niet installeer dan ook Git via [deze link](https://git-scm.com/downloads).
+
+&nbsp;
 
 ## Setup
 
@@ -14,6 +18,8 @@
 ```bash
 git clone [link]
 ```
+
+&nbsp;
 
 ## Usage
 
