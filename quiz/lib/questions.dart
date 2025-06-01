@@ -31,26 +31,28 @@ class QuestionScreen extends StatefulWidget {
 class _QuestionScreenState extends State<QuestionScreen> {
   List<Question> questions = [];
   int index = 0;
+  double progress = 0;
   int score = 0;
   bool clicked = false;
   String selected = "";
   late Timer _timer;
   int _totalSeconds = 0;
-  int _minuteCount = 0;
-  int _secondCount = 0;
+  bool animationToggle = false;
+  // int _minuteCount = 0;
+  // int _secondCount = 0;
 
   @override
   void initState() {
     super.initState();
-    _timer = Timer.periodic(Duration(seconds: 1), (timer){
+    _timer = Timer.periodic(Duration(seconds: 1), (timer) {
       setState(() {
-        if(_secondCount == 59){
-          _secondCount = 0;
-          _minuteCount += 1;
-        }
-        else{
-          _secondCount += 1;
-        }
+        // if(_secondCount == 59){
+        //   _secondCount = 0;
+        //   _minuteCount += 1;
+        // }
+        // else{
+        //   _secondCount += 1;
+        // }
         _totalSeconds += 1;
       });
     });
@@ -75,19 +77,30 @@ class _QuestionScreenState extends State<QuestionScreen> {
     setState(() {
       clicked = true;
       selected = answer;
-
-      if (answer == questions[index].correct) {
-        score += 20;
-      }
     });
-
+    Future.delayed(const Duration(seconds: 1), () {
+      setState(() {
+        progress++;
+      });
+    });
+    Future.delayed(const Duration(milliseconds: 1500), () {
+      setState(() {
+        animationToggle = true;
+      });
+    });
     Future.delayed(const Duration(seconds: 2), () {
       setState(() {
+        if (answer == questions[index].correct) {
+          score += 20;
+        }
         clicked = false;
         selected = "";
         index++;
       });
     });
+    // Future.delayed(const Duration(milliseconds: 2000), () {
+    //     animationToggle = false;
+    // });
   }
 
   @override
@@ -131,20 +144,19 @@ class _QuestionScreenState extends State<QuestionScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
+          spacing: 20,
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 IconButton(
-                  onPressed: (){
+                  onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(
-                        builder: (context) => HomeScreen()
-                      )
+                      MaterialPageRoute(builder: (context) => HomeScreen()),
                     );
                   },
-                  icon: Icon(Icons.home_rounded, color: Colors.white, size: 25,),
+                  icon: Icon(Icons.home_rounded, color: Colors.white, size: 25),
                 ),
                 SizedBox(width: 10),
                 Text(
@@ -153,34 +165,56 @@ class _QuestionScreenState extends State<QuestionScreen> {
                 ),
                 SizedBox(width: 10),
                 Expanded(
-                  child: LinearProgressIndicator(
-                    value: index / 5,
-                    backgroundColor: Colors.white30,
-                    valueColor: AlwaysStoppedAnimation(Colors.white),
-                    minHeight: 10,
-                    borderRadius: BorderRadius.circular(5),
+                  child: TweenAnimationBuilder<double>(
+                    tween: Tween(begin: progress - 1, end: progress / 5),
+                    duration: Duration(seconds: 1),
+                    builder: (context, value, _) => LinearProgressIndicator(
+                      value: value,
+                      backgroundColor: Colors.black26,
+                      valueColor: AlwaysStoppedAnimation(Colors.white),
+                      minHeight: 10,
+                      borderRadius: BorderRadius.circular(5),
+                    ),
                   ),
                 ),
                 SizedBox(width: 10),
-                SizedBox(
-                  width: 50,
-                  height: 20,
-                  child: Text(
-                    '$score',
-                    style: TextStyle(color: Colors.white, fontSize: 16),
+                Container(
+                  width: 60,
+                  // height: 20,
+                  padding: EdgeInsets.symmetric(vertical: 4),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.black26,
+                  ),
+                  child: Align(
+                    child: Text(
+                      '$score',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                        color: Colors.white,
+                      ),
+                    ),
                   ),
                 ),
                 SizedBox(width: 10),
-                Text(formattedTime, style: TextStyle(
-                    fontSize: 17,
-                    color: Colors.white
-                  ),
-                )
+                Text(
+                  formattedTime,
+                  style: TextStyle(fontSize: 17, color: Colors.white),
+                ),
               ],
             ),
             const SizedBox(height: 0),
             // Text('data'),
-            Expanded(
+            AnimatedOpacity(
+              opacity: animationToggle ? 0 : 1,
+              duration: const Duration(milliseconds: 500),
+              onEnd: (){
+                setState(() {
+                  animationToggle = false;
+                });
+              },
+              child: Expanded(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -225,6 +259,8 @@ class _QuestionScreenState extends State<QuestionScreen> {
                 ],
               ),
             ),
+            ),
+            
           ],
         ),
       ),
@@ -232,7 +268,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
   }
 
   @override
-  void dispose(){
+  void dispose() {
     _timer.cancel();
     super.dispose();
   }

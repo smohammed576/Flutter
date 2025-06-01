@@ -104,7 +104,7 @@ class HomeScreen extends StatelessWidget {
                   )
                 );
               },
-              icon: Icon(Icons.leaderboard_rounded),
+              icon: Icon(Icons.leaderboard_rounded, color: Colors.white,),
             ),
           ),
         ],
