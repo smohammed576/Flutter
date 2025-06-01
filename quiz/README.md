@@ -1,5 +1,10 @@
 # Quiz
 
+## Installatie
+- Installeer de Flutter en Dart extensies in Visual Studio Code.
+- Installeer Visual Studio Code haha.
+- Installeer Git om het project te kunnen clonen.
+
 ## Setup
 
 - Je hebt Visual Studio Code nodig om dit project te kunnen opzetten.
