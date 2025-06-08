@@ -1,7 +1,6 @@
 # Quiz
 
 ## Installatie
-<a name="installatie"></a>
 - Installeer Visual Studio Code.
 - Open Visual Studio Code en ga naar Extensies (Ctrl+Shift+X voor Windows, Command+Shift+X voor Mac)
 - Zoek en installeer de Flutter en Dart extensies in Visual Studio Code.
