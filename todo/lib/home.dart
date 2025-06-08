@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:todo/constants/colors.dart';
 import 'package:todo/models/task.dart';
+import 'package:uuid/uuid.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -150,7 +151,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   itemBuilder: (context, index) {
                     final task = list[index];
                     return Dismissible(
-                      key: Key('$index'),
+                      key: Key(task.id),
                       direction: DismissDirection.endToStart,
                       onDismissed: (_) => deleteTask(index),
                       background: Container(),
@@ -231,7 +232,7 @@ class _HomeScreenState extends State<HomeScreen> {
       context: context,
       builder: (BuildContext context) {
         return Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
           child: Row(
             children: [
               Expanded(
@@ -248,9 +249,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 onPressed: () {
                   if (_textController.text.trim().isNotEmpty) {
+                    var uuid = Uuid();
+                    String id = uuid.v4();
                     setState(() {
                       list.add(
-                        Task(text: _textController.text, checked: false),
+                        Task(id: id, text: _textController.text, checked: false),
                       );
                       _textController.clear();
                     });

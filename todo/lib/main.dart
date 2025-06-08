@@ -8,7 +8,6 @@ void main() {
     MaterialApp(
       home: HomeScreen(),
       theme: lightTheme,
-      // darkTheme: ThemeData(scaffoldBackgroundColor: Colors.black),
       darkTheme: darkTheme,
       themeMode: ThemeMode.system,
     ),
