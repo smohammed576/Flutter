@@ -23,7 +23,10 @@ git clone [link]
 ## Usage
 
 - Open het project in Visual Studio Code en druk op F5 om te runnen.
-- Om ervoor te zorgen dat dit werkt, moet je de benodigde extensies hebben geinstalleerd. Is dit niet het geval, ga dan terug naar [Installatie](#installatie).
-- Er opent dan een menu en selecteer dan Chrome.
+- Om ervoor te zorgen dat dit werkt, moet je de benodigde extensies hebben geinstalleerd. Is dit niet het geval, ga dan terug naar de [installatie](#installatie).
+- Als alle juiste extensies zijn geinstalleerd, moet er een menu geopent worden met een aantal keuzes, selecteer hier dan **Chrome**.
 - Wacht even tot alles goed geladen is en als alles goed is gegaan wordt er dan een nieuw tab geopent met de applicatie.
-- Easy peasy lemon squeezy
+- Ga naar dit nieuwe tab en druk op je rechtermuis en selecteer dan **Inspecteren**.
+- Je krijgt hierdoor onder andere een balk bovenaan en waar bij moet staan: **Dimensions: Responsive**.
+- Druk hierop en selecteer **Iphone SE**. Als deze keuze niet bij jouw menu staat, selecteer dan een ander mobiel formaat.
+- Als alles nu goed is gelopen, moet je nu de applicatie op mobiel formaat kunnen bekijken.
