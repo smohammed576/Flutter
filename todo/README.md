@@ -1,4 +1,4 @@
-# Quiz
+# Todo
 
 ## Installatie
 - Installeer Visual Studio Code.
