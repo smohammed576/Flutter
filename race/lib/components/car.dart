@@ -29,7 +29,7 @@ class Player extends SpriteComponent
       game.pauseEngine();
       dialogBuilder(game.context, "Crashed!", color);
     } else {
-      if (other.position.y > position.y - 475) {
+      if (other.position.y > -50) {
         game.pauseEngine();
         dialogBuilder(game.context, "Finished!", color);
       }
@@ -47,7 +47,7 @@ class Player extends SpriteComponent
   }
 
   void moveLeft(double dt) {
-    position.x += dt * 10;
+    position.x += dt * 20;
     position.x = position.x.clamp(0, game.size.x - size.x);
   }
 
