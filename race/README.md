@@ -1,5 +1,8 @@
 # Race
 
+[!NOTE]
+Ik kan mijn telefoon niet gebruiken om de gyroscoop te testen omdat ik op Windows werk, dus ik heb voor de zekerheid gewoon de besturing met knoppen gemaakt.  
+
 ## Installatie
 - Installeer Visual Studio Code.
 - Open Visual Studio Code en ga naar Extensies (Ctrl+Shift+X voor Windows, Command+Shift+X voor Mac)
