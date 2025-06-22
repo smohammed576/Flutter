@@ -1,0 +1,62 @@
+{
+    "snacks": [
+        {
+            "image": "https://www.daelmansbanket.nl/wp-content/uploads/2022/04/stroopwafel.png",
+            "name": "Stroopwafel",
+            "country": "Netherlands",
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/330px-Flag_of_the_Netherlands.svg.png",
+            "status": ""
+        },
+        {
+            "image": "https://pngimg.com/d/waffle_PNG66.png",
+            "name": "J.J. waffle",
+            "country": "Pawnee, Indiana",
+            "flag": "https://static.wikia.nocookie.net/parksandrecreation/images/0/05/Pawnee%2C_Indiana_Flag.png/revision/latest/scale-to-width-down/1200?cb=20221009060250",
+            "status": ""
+        },
+        {
+            "image": "https://static.vecteezy.com/system/resources/thumbnails/044/813/717/small_2x/churros-isolated-on-transparent-background-png.png",
+            "name": "Churros",
+            "country": "Spain",
+            "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/1200px-Flag_of_Spain.svg.png",
+            "status": ""
+        },
+        {
+            "image": "https://png.pngtree.com/png-clipart/20230430/original/pngtree-tamales-on-isloated-transparent-background-png-image_9127647.png",
+            "name": "Tamales",
+            "country": "Mexico",
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Flag_of_Mexico.png/1280px-Flag_of_Mexico.png",
+            "status": ""
+        },
+        {
+            "image": "https://png.pngtree.com/png-clipart/20240328/original/pngtree-realistic-french-croissant-png-image_14700026.png",
+            "name": "Croissant",
+            "country": "France",
+            "flag": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxN4JbMSKLLIbHbcLXLvzNLHbzftOx7y_D5A&s",
+            "status": ""
+        },
+        {
+            "image": "",
+            "name": "",
+            "country": "",
+            "flag": "",
+            "status": ""
+        },
+        {
+            "image": "",
+            "name": "",
+            "country": "",
+            "flag": "",
+            "status": ""
+        }
+    ],
+    "users": [
+        {
+            "name": "Sheldon Lee Cooper",
+            "image": "",
+            "country": "Texas, USA",
+            "flag": "",
+            "swaps": 0
+        }
+    ]
+}
