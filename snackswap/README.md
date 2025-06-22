@@ -3,6 +3,10 @@
 > [!NOTE]
 > Ik was nog niet klaar:( I was busy, dus ik had niet veel tijd. Maar okay in de garbage file staan een aantal gegevens die je kan invoeren. Als je een persoon hebt geregistreerd dan hoef je de volgende keer alleen maar de naam **correct, met hoofdletters en alles** in te vullen en de rest een random letter en dan kan je als het goed is gewoon inloggen. Soms bij toevoegen van een nieuwe snack moet je even reloaden om echt de verandering te zien.
 
+
+> [!IMPORTANT]
+> Het is heel belangrijk om bij de zoekfunctie alles goed te schrijven, dit betekent ook met hoofdletters. Zelfde geldt voor als je wilt inloggen met een persoon waarmee je al eens eerder mee hebt ingelogd.
+
 ## Installatie
 - Installeer Visual Studio Code.
 - Open Visual Studio Code en ga naar Extensies (Ctrl+Shift+X voor Windows, Command+Shift+X voor Mac)
