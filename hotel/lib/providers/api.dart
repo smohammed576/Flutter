@@ -20,8 +20,6 @@ class ApiService {
       headers: {'Authorization': 'Bearer $token'},
     );
     if (response.statusCode == 200) {
-      // return Room.fromJson(jsonDecode(response.body) as Map<String, dynamic>);
-      print(response.body);
       return Room.fromJson(jsonDecode(response.body));
     } else {
       throw Exception('failed');
@@ -42,7 +40,6 @@ class ApiService {
       headers: {'Authorization': 'Bearer $token'}
     );
     if(response.statusCode == 200){
-      print(response.body);
       return Room.fromJson(jsonDecode(response.body));
     }
     else{
