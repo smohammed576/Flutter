@@ -30,3 +30,6 @@ git clone [link]
 - Je krijgt hierdoor onder andere een balk bovenaan en waar bij moet staan: **Dimensions: Responsive**.
 - Druk hierop en selecteer **Iphone SE**. Als deze keuze niet bij jouw menu staat, selecteer dan een ander mobiel formaat.
 - Als alles nu goed is gelopen, moet je nu de applicatie op mobiel formaat kunnen bekijken.
+
+  ## Other
+  Ik heb het internet een paar keer gebruikt, dit was onder andere voor de graph, hoe je dates format in Flutter, wat dingen over forms en nog wat hele kleine dingen zoals colorBlendMode et cetera.
