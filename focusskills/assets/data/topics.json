@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Reduce Stress",
+        "image": "assets/images/science_seance.svg",
+        "colors": ["purple", "beigeyellow"],
+        "isLarge": true
+    },
+    {
+        "title": "Increase Happiness",
+        "image": "assets/images/smiles.svg",
+        "colors": ["orange", "grey"],
+        "isLarge": false
+    },
+    {
+        "title": "Personal Growth",
+        "image": "assets/images/mountain.svg",
+        "colors": ["green", "beigeyellow"],
+        "isLarge": true
+    },
+    {
+        "title": "Improve Performance",
+        "image": "assets/images/man_at_desk.svg",
+        "colors": ["red", "lightcolor"],
+        "isLarge": false
+    },
+    {
+        "title": "Reduce Anxiety",
+        "image": "assets/images/tired.svg",
+        "colors": ["yellow", "grey"],
+        "isLarge": true
+    },
+    {
+        "title": "Better Sleep",
+        "image": "assets/images/sleeping.svg",
+        "colors": ["grey", "lightcolor"],
+        "isLarge": false
+    }
+]
