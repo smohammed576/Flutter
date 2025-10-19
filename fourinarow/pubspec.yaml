@@ -1,0 +1,38 @@
+name: fourinarow
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_svg: ^2.2.1
+  animations: ^2.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+  fonts:
+    - family: Anybody
+      fonts:
+        - asset: fonts/Anybody-Regular.ttf
+          weight: 400
+        - asset: fonts/Anybody-Medium.ttf
+          weight: 500
+        - asset: fonts/Anybody-SemiBold.ttf
+          weight: 600
+        - asset: fonts/Anybody-Bold.ttf
+          weight: 700
+        - asset: fonts/Anybody-ExtraBold.ttf
+          weight: 800
+        - asset: fonts/Anybody-Black.ttf
+          weight: 900
