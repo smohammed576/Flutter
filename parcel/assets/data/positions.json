@@ -1,0 +1,26 @@
+[
+    {
+        "top": 70.0,
+        "left": 30.0,
+        "right": null,
+        "bottom": null
+    },
+    {
+        "top": 70.0,
+        "left": null,
+        "right": 30.0,
+        "bottom": null
+    },
+    {
+        "top": null,
+        "left": 30.0,
+        "right": null,
+        "bottom": 250.0
+    },
+    {
+        "top": null,
+        "left": null,
+        "right": 20.0,
+        "bottom": 300.0
+    }
+]

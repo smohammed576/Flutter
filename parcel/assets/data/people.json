@@ -1,0 +1,52 @@
+[
+    {
+        "name": "Olivia Benson",
+        "image": "people/olivia.png",
+        "rating": 5.0
+    },
+    {
+        "name": "Alex Cabot",
+        "image": "people/cabot.png",
+        "rating": 5.0
+    },
+    {
+        "name": "Casey Novak",
+        "image": "people/novak.png",
+        "rating": 5.0
+    },
+    {
+        "name": "Sonny Carisi",
+        "image": "people/carisi.png",
+        "rating": 4.2
+    },
+    {
+        "name": "Fin Tutuola",
+        "image": "people/fin.png",
+        "rating": 4.5
+    },
+    {
+        "name": "John Munch",
+        "image": "people/fin.png",
+        "rating": 4.8
+    },
+    {
+        "name": "Amanda Rollins",
+        "image": "people/rollins.png",
+        "rating": 4.7
+    },
+    {
+        "name": "Snoopy Munch",
+        "image": "people/snoopy.png",
+        "rating": 4.8
+    },
+    {
+        "name": "Elliot Stabler",
+        "image": "people/stabler.png",
+        "rating": 3.5
+    },
+    {
+        "name": "Joe Velasco",
+        "image": "people/velasco.png",
+        "rating": 3.9
+    }
+]

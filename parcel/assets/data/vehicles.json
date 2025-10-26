@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Bicycle Delivery",
+        "image": "bike.png",
+        "price": 16,
+        "duration": 60
+    },
+    {
+        "name": "Motorbike Delivery",
+        "image": "bike.png",
+        "price": 20,
+        "duration": 60
+    },
+    {
+        "name": "Car Delivery",
+        "image": "bike.png",
+        "price": 34,
+        "duration": 60
+    },
+    {
+        "name": "Car-van Delivery",
+        "image": "bike.png",
+        "price": 60,
+        "duration": 60
+    }
+]

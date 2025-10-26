@@ -1,0 +1,14 @@
+[
+    {
+        "label": "Food Delivery",
+        "image": "pizza.png"
+    },
+    {
+        "label": "Parcel",
+        "image": "package.png"
+    },
+    {
+        "label": "Groceries",
+        "image": "shoppingcart.png"
+    }
+]

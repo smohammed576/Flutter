@@ -1,0 +1,102 @@
+[
+    {
+        "name": "Amor",
+        "image": "images/amor.png",
+        "rating": 4.7
+    },
+    {
+        "name": "Ava",
+        "image": "images/ava.png",
+        "rating": 4.7
+    },
+    {
+        "name": "Charlie Brown",
+        "image": "images/charlie.png",
+        "rating": 4.7
+    },
+    {
+        "name": "Daniel",
+        "image": "images/daniel.png",
+        "rating": 4.7
+    },
+    {
+        "name": "Emma",
+        "image": "images/emma.png",
+        "rating": 4.7
+    },
+    {
+        "name": "Ethan",
+        "image": "images/ethan.png",
+        "rating": 4.7
+    },
+    {
+        "name": "Evelyn",
+        "image": "images/evelyn.png",
+        "rating": 4.7
+    },
+    {
+        "name": "Harper",
+        "image": "images/harper.png",
+        "rating": 4.7
+    },
+    {
+        "name": "Isabella",
+        "image": "images/isabella.png",
+        "rating": 4.7
+    },
+    {
+        "name": "Jacob",
+        "image": "images/jacob.png",
+        "rating": 4.7
+    },
+    {
+        "name": "James",
+        "image": "images/james.png",
+        "rating": 4.7
+    },
+    {
+        "name": "Liam",
+        "image": "images/liam.png",
+        "rating": 4.7
+    },
+    {
+        "name": "Logan",
+        "image": "images/logan.png",
+        "rating": 4.7
+    },
+    {
+        "name": "Lucas",
+        "image": "images/lucas.png",
+        "rating": 4.7
+    },
+    {
+        "name": "Mason",
+        "image": "images/mason.png",
+        "rating": 4.7
+    },
+    {
+        "name": "Mia",
+        "image": "images/mia.png",
+        "rating": 4.7
+    },
+    {
+        "name": "Noah Benson",
+        "image": "images/noah.png",
+        "rating": 4.7
+    },
+    {
+        "name": "Olivia Benson",
+        "image": "images/olivia.png",
+        "rating": 4.7
+    },
+    {
+        "name": "Sophia",
+        "image": "images/sophia.png",
+        "rating": 4.7
+    },
+    {
+        "name": "William Lewis",
+        "image": "images/william.png",
+        "rating": 4.7
+    }
+]
