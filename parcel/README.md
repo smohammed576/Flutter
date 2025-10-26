@@ -32,4 +32,4 @@ git clone [link]
 - Als alles nu goed is gelopen, moet je nu de applicatie op mobiel formaat kunnen bekijken.
 
   ## Other
-  Het is niet af maar komt omdat ik echt korte tijd had. Also als je leuk bent dan verander je in map.dart de assets/data/drivers.json maar assets/data/people.json
+  Het is niet af maar komt omdat ik echt korte tijd had. Also als je leuk bent dan verander je in map.dart de assets/data/drivers.json naar assets/data/people.json
