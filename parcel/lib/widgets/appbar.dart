@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:parcel/constants/colors.dart';
+import 'package:parcel/providers/session.dart';
+import 'package:parcel/screens/auth.dart';
 
 class ParcelAppBar extends StatelessWidget{
   const ParcelAppBar({super.key});
@@ -31,7 +33,13 @@ class ParcelAppBar extends StatelessWidget{
         ),
       ),
       TextButton(
-          onPressed: (){},
+          onPressed: () {
+            SessionService().logout();
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => AuthScreen(),)
+            );
+          },
           child: Text('Cancel order', style: TextStyle(
               color: AppColors.crow,
               fontSize: 15,
